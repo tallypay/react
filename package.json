@@ -1,0 +1,65 @@
+{
+  "name": "@tallypay/react",
+  "version": "0.0.3",
+  "description": "React hooks, components, and 402 beacon for TallyPay x402 instrumentation",
+  "license": "MIT",
+  "author": "Luke Davies",
+  "homepage": "https://github.com/tallypay/react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tallypay/react.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tallypay/react/issues"
+  },
+  "keywords": [
+    "x402",
+    "http-402",
+    "payments",
+    "react",
+    "hooks",
+    "tracing",
+    "tallypay"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@tallypay/core": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.2",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "jsdom": "^29.0.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^3.0.0"
+  }
+}
